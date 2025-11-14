@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            color: #333;
+            margin-top: 1.5rem;
+        }
+        h3 {
+            color: #555;
+            margin-top: 1rem;
+        }
+        pre {
+            background: #fff;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            white-space: pre-wrap; /* preserve line breaks */
+            word-wrap: break-word;
+        }
+        p {
+            background: #fff;
+            padding: 0.5rem 1rem;
+            border-left: 3px solid #007acc;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h2>Extracted Text</h2>
+    <pre>{{ raw_text }}</pre>
+
+    <h2>Section-wise Summary</h2>
+    {% for title, summary in sections.items() %}
+        <h3>{{ title }}</h3>
+        <p>{{ summary }}</p>
+    {% endfor %}
+</body>
+</html>
